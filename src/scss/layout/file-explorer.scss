@@ -1,0 +1,155 @@
+@import 'vuefinder/dist/style.css';
+
+.vuefinder {
+  padding-top: 20px;
+
+  .dark {
+    .m-1 {
+      background-color: transparent !important;
+    }
+
+    .vf-explorer-selected {
+      svg {
+        stroke: var(--primary);
+        fill: var(--primary);
+      }
+
+      .break-all {
+        color: var(--primary);
+      }
+    }
+
+    > ul {
+      background-color: var(--white) !important;
+      color: #363636 !important;
+
+      li:not(:last-child) {
+        border-bottom: 1px solid var(--border) !important;
+      }
+
+      li:hover {
+        background-color: #f5f5f5 !important;
+      }
+    }
+
+    > .relative:first-child {
+      background: transparent !important;
+
+      > .border-neutral-300:nth-child(1) {
+        background: transparent !important;
+
+        > div:first-child {
+          div {
+            svg:hover {
+              color: var(--primary);
+            }
+          }
+        }
+
+        > div:last-child {
+          > div:first-child,
+          > div:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+
+      > .border-neutral-300:nth-child(2) {
+        background: var(--white) !important;
+        margin: 10px 0 0;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 15px 10px;
+
+        > div:last-child {
+          background-color: transparent;
+        }
+      }
+
+      > .relative {
+        background: var(--white) !important;
+        color: var(--light-text);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-top: 5px;
+
+        > div:first-child {
+          > div {
+            background-color: transparent;
+            border-bottom: 1px solid var(--border);
+          }
+        }
+
+        > .z-0 {
+          > div {
+            cursor: pointer;
+          }
+
+          > div:hover {
+            background-color: transparent;
+          }
+
+          > div:active {
+            background-color: transparent;
+          }
+        }
+      }
+
+      > div:last-child {
+        display: none;
+      }
+    }
+
+    > .relative:nth-child(2) {
+      > .fixed:first-child {
+        background-color: rgba(101, 101, 104, 0.8) !important;
+      }
+
+      .relative {
+        > div {
+          background-color: var(--white) !important;
+        }
+
+        button {
+          cursor: pointer;
+        }
+
+        > div:last-child {
+          > button:first-child {
+            background-color: var(--primary);
+            height: 34px;
+            margin-top: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-dark {
+  .vuefinder {
+    .dark ul {
+      background-color: var(--dark-sidebar-light-10) !important;
+      color: var(--dark-dark-text) !important;
+
+      li:not(:last-child) {
+        border-bottom: 1px solid var(--border) !important;
+      }
+
+      li:hover {
+        background-color: var(--dark-sidebar-light-10) !important;
+        border-radius: 3px;
+      }
+    }
+
+    .dark .relative .relative,
+    .dark .relative .border-neutral-300:nth-child(2) {
+      background: var(--dark-sidebar) !important;
+      border: none;
+    }
+
+    .dark .relative:nth-child(2) .relative > div {
+      background-color: var(--dark-sidebar-light-6) !important;
+    }
+  }
+}
